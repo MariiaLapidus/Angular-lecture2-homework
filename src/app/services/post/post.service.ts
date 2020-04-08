@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {PostModel} from '../models/PostModel';
+import {PostModel} from '../../models/PostModel';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -19,7 +19,7 @@ export class PostService {
     return this.http.get<PostModel[]>('https://jsonplaceholder.typicode.com/posts');
     // jhjhj
   }
-  getPost(id: number) {
-    return this.http.get<PostModel[]>('https://jsonplaceholder.typicode.com/posts/${id}');
-  }
+  // getPost(id: number) {
+  //   return this.http.get<PostModel[]>('https://jsonplaceholder.typicode.com/posts/${id}');
+  // }
 }
