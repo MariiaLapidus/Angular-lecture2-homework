@@ -1,0 +1,20 @@
+<div >
+  <h2>
+  {{user.id}}
+  {{user.name}}
+  {{user.username}}
+  </h2>
+  <ul *ngFor="let post of user.posts">
+   <h3>Post  {{post.id}}</h3>
+
+   <b> {{post.title}} </b>
+    {{post.body}}:
+    <li *ngFor="let comment of post.comments">
+      <b>comment-</b>
+      {{comment.id}}
+      {{comment.body}}
+
+    </li>
+  </ul>
+</div>
+<hr>
